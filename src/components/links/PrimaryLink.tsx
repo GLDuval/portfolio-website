@@ -27,7 +27,7 @@ const PrimaryLink = React.forwardRef<HTMLAnchorElement, PrimaryLinkProps>(
             'disabled:text-primary-200',
           ],
           variant === 'basic' && [
-            'text-black hover:text-gray-600 active:text-gray-800',
+            'text-text-100 hover:text-primary-600 active:text-primary-500',
             'disabled:text-gray-300',
           ],
           //#endregion  //*======== Variant ===========
