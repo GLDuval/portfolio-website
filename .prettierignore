@@ -24,8 +24,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.pnpm-debug.log*
-
 # local env files
 .env.local
 .env.development.local
@@ -38,4 +36,4 @@ yarn-error.log*
 # changelog
 CHANGELOG.md
 
-pnpm-lock.yaml
+package-lock.json
