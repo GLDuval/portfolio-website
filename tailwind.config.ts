@@ -1,5 +1,6 @@
 import type { Config } from 'tailwindcss';
 import defaultTheme from 'tailwindcss/defaultTheme';
+import { default as flattenColorPalette } from 'tailwindcss/lib/util/flattenColorPalette';
 
 export default {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
@@ -8,6 +9,7 @@ export default {
       fontFamily: {
         primary: ['Inter', ...defaultTheme.fontFamily.sans],
       },
+
       colors: {
         text: {
           50: '#f0eff6',
@@ -36,17 +38,17 @@ export default {
           950: '#0b0b0e',
         },
         primary: {
-          50: '#efeff6',
-          100: '#dfdeed',
-          200: '#bfbddb',
-          300: '#9f9cc9',
-          400: '#7e7bb7',
-          500: '#5e5ba4',
-          600: '#4b4884',
-          700: '#393663',
-          800: '#262442',
-          900: '#131221',
-          950: '#090910',
+          50: '#eae9fb',
+          100: '#d5d3f8',
+          200: '#aba8f0',
+          300: '#827ce9',
+          400: '#5851e1',
+          500: '#2e25da',
+          600: '#251eae',
+          700: '#1c1683',
+          800: '#120f57',
+          900: '#09072c',
+          950: '#050416',
         },
         secondary: {
           50: '#e7e5ff',
@@ -75,6 +77,7 @@ export default {
           950: '#070713',
         },
       },
+
       keyframes: {
         flicker: {
           '0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100%': {
@@ -102,5 +105,17 @@ export default {
       },
     },
   },
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [require('@tailwindcss/forms'), addVariablesForColors],
 } satisfies Config;
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function addVariablesForColors({ addBase, theme }: any) {
+  const allColors = flattenColorPalette(theme('colors'));
+  const newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+
+  addBase({
+    ':root': newVars,
+  });
+}

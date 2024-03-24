@@ -4,10 +4,14 @@ import Head from 'next/head';
 import * as React from 'react';
 import '@/lib/env';
 
+import { HeroParallax } from '@/components/HeroParallax';
 import ArrowLink from '@/components/links/ArrowLink';
 import ButtonLink from '@/components/links/ButtonLink';
 import UnderlineLink from '@/components/links/UnderlineLink';
 import UnstyledLink from '@/components/links/UnstyledLink';
+import Pill from '@/components/Pill';
+
+import ExperienceSection from '@/app/components/experience-section/ExperienceSection';
 
 /**
  * SVGR Support
@@ -16,7 +20,27 @@ import UnstyledLink from '@/components/links/UnstyledLink';
  * You can override the next-env if the type is important to you
  * @see https://stackoverflow.com/questions/68103844/how-to-override-next-js-svg-module-declaration
  */
-import Logo from '~/svg/Logo.svg';
+
+export const products = [
+  {
+    title: 'Moonbeam',
+    link: 'https://gomoonbeam.com',
+    thumbnail:
+      'https://aceternity.com/images/products/thumbnails/new/moonbeam.png',
+  },
+  {
+    title: 'Cursor',
+    link: 'https://cursor.so',
+    thumbnail:
+      'https://aceternity.com/images/products/thumbnails/new/cursor.png',
+  },
+  {
+    title: 'Rogue',
+    link: 'https://userogue.com',
+    thumbnail:
+      'https://aceternity.com/images/products/thumbnails/new/rogue.png',
+  },
+];
 
 export default function HomePage() {
   return (
@@ -24,14 +48,11 @@ export default function HomePage() {
       <Head>
         <title>Hi</title>
       </Head>
-      <section className='bg-background-900' >
+      <section>
+        <HeroParallax products={products} />
+        <ExperienceSection />
         <div className='layout relative flex min-h-screen flex-col items-center justify-center py-12 text-center'>
-          <Logo className='w-16' />
-          <h1 className='mt-4'>Next.js + Tailwind CSS + TypeScript Starter</h1>
-          <p className='mt-2 text-sm'>
-            A starter for Next.js, Tailwind CSS, and TypeScript with Absolute
-            Import, Seo, Link component, pre-configured with Husky{' '}
-          </p>
+          <Pill>React</Pill>
           <p className='mt-2 text-sm'>
             <ArrowLink href='https://github.com/theodorusclarence/ts-nextjs-tailwind-starter'>
               See the repository
