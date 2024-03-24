@@ -9,7 +9,6 @@ export default {
       fontFamily: {
         primary: ['Inter', ...defaultTheme.fontFamily.sans],
       },
-
       colors: {
         text: {
           50: '#f0eff6',
@@ -77,7 +76,6 @@ export default {
           950: '#070713',
         },
       },
-
       keyframes: {
         flicker: {
           '0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100%': {
@@ -102,6 +100,9 @@ export default {
       animation: {
         flicker: 'flicker 3s linear infinite',
         shimmer: 'shimmer 1.3s linear infinite',
+      },
+      boxShadow: {
+        primary: '0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px #E6ECF8',
       },
     },
   },

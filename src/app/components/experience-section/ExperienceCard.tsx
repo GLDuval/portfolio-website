@@ -1,7 +1,9 @@
+import Image, { StaticImageData } from 'next/image';
+
 import Pill from '@/components/Pill';
 
 interface ExperienceCardProps {
-  logo: React.ReactNode;
+  logo: StaticImageData;
   title: string;
   period: string;
   tasks: string[];
@@ -15,27 +17,25 @@ const ExperienceCard = ({
   tasks,
   skills,
 }: ExperienceCardProps) => (
-  <div className='rounded-xl border-2 border-primary-700 p-5'>
-    <div className='flex flex-row space-x-3 align-middle'>
-      {logo}
-      <div className='flex flex-col space-y-2'>
-        <div>
-          <h3>{title}</h3>
-          <p>{period}</p>
-        </div>
-        <ul className='ml-5'>
-          {tasks.map((task) => (
-            <li key={task} className='list-disc'>
-              {task}
-            </li>
-          ))}
-        </ul>
+  <div className='rounded-xl p-5 shadow-primary'>
+    <div className='flex flex-col space-y-5 justify-center'>
+      <div className='mx-auto'>
+        <Image src={logo} alt='Company Logo' height={100} />
+      </div>
+      <div>
+        <h3>{title}</h3>
+        <p>{period}</p>
+      </div>
+      <div>
+        {tasks.map((task) => (
+          <p key={task}>{task}</p>
+        ))}
+      </div>
 
-        <div className='flex flex-row space-x-2'>
-          {skills.map((skill) => (
-            <Pill key={skill}>{skill}</Pill>
-          ))}
-        </div>
+      <div className='flex flex-wrap gap-2 justify-center'>
+        {skills.map((skill) => (
+          <Pill key={skill}>{skill}</Pill>
+        ))}
       </div>
     </div>
   </div>
