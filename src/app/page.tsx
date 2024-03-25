@@ -12,6 +12,7 @@ import UnstyledLink from '@/components/links/UnstyledLink';
 import Pill from '@/components/Pill';
 
 import ExperienceSection from '@/app/components/experience-section/ExperienceSection';
+import OtherProjectsSection from '@/app/components/other-projects-section/OtherProjectsSection';
 
 /**
  * SVGR Support
@@ -51,6 +52,10 @@ export default function HomePage() {
       <section>
         <HeroParallax products={products} />
         <ExperienceSection />
+        <div className='pt-20'>
+          <OtherProjectsSection />
+        </div>
+
         <div className='layout relative flex min-h-screen flex-col items-center justify-center py-12 text-center'>
           <Pill>React</Pill>
           <p className='mt-2 text-sm'>
