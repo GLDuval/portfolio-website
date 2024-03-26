@@ -9,8 +9,8 @@ const OtherProjectsSection = () => {
   return (
     <>
       <motion.div className='bg-primary-500 w-full pb-40 pt-20'>
-        <motion.div className='flex flex-col max-w-7xl mx-auto px-4 gap-10 text-center items-center'>
-          <motion.div className='flex flex-col gap-4 text-center items-center'>
+        <motion.div className='flex flex-col max-w-6xl mx-auto px-4 gap-10'>
+          <motion.div className='flex flex-col gap-4 '>
             <motion.h2 className='text-4xl font-bold text-text-50'>
               Competitions & Awards
             </motion.h2>
@@ -35,21 +35,22 @@ const OtherProjectsSection = () => {
               competition where we won the Best in Class in Search & Rescue
               award.
             </motion.p>
-            <ArrowLink
-              href='https://www.linkedin.com/feed/update/urn:li:activity:7076642547237822464'
-              target='_blank'
-              className='text-text-50'
-            >
-              See our robot in action
-            </ArrowLink>
           </motion.div>
+          <ArrowLink
+            href='https://www.linkedin.com/feed/update/urn:li:activity:7076642547237822464'
+            target='_blank'
+            className='text-text-50 flex items-center gap-2 cursor-pointer'
+            as='a'
+          >
+            See our robot in action
+          </ArrowLink>
           <motion.h2 className='text-4xl font-bold text-text-50 pb-5'>
             What I did
           </motion.h2>
         </motion.div>
       </motion.div>
-      <motion.div className='flex flex-col md:flex-row items-center justify-center md:items-stretch max-w-7xl mx-auto px-4 -mt-40 gap-4 '>
-        <div className='bg-white rounded-lg p-6 shadow-primary text-center gap-4 flex flex-col col-span-2 lg:w-1/2'>
+      <motion.div className='flex flex-col md:flex-row md:items-stretch max-w-6xl mx-auto px-4 -mt-40 gap-4 '>
+        <div className='bg-white rounded-lg p-6 shadow-primary gap-4 flex flex-col col-span-2 lg:w-1/2'>
           <div className='flex flex-col gap-2'>
             <h3 className='text-xl font-bold pb-2'>
               @ Robocup 2022 in Bangkok
@@ -77,7 +78,7 @@ const OtherProjectsSection = () => {
             </p>
           </div>
         </div>
-        <div className='bg-white rounded-lg md:w-1/3 lg:w-1/4'>
+        <div className='bg-white rounded-lg md:w-1/3 lg:w-1/3'>
           <Image
             src={Enrich}
             alt='Enrich 2023 Competition'

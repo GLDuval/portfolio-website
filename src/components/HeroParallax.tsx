@@ -81,8 +81,8 @@ export const HeroParallax = ({
             opacity: textOpacity,
           }}
         >
-          <motion.div className='flex flex-col max-w-7xl mx-auto px-4 gap-20 text-center items-center'>
-            <motion.div className='flex flex-col gap-4 text-center items-center'>
+          <motion.div className='flex flex-col max-w-6xl mx-auto px-4 gap-20 '>
+            <motion.div className='flex flex-col gap-4 '>
               <motion.h2 className='text-4xl font-bold text-text-50'>
                 About Me
               </motion.h2>
@@ -108,7 +108,7 @@ export const HeroParallax = ({
           opacity,
         }}
       >
-        <motion.div className='max-w-7xl mx-auto px-4 pt-10 -mt-60'>
+        <motion.div className='max-w-6xl mx-auto px-4 pt-10 -mt-60'>
           <motion.div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 content-center justify-stretch'>
             {firstRow.map((product) => (
               <ProductCard product={product} key={product.title} />
@@ -122,7 +122,7 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return (
-    <div className='max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0'>
+    <div className='max-w-6xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0'>
       <h1 className='text-2xl md:text-7xl font-bold'>
         Hey, I'm <br />
         <span className='text-primary-500'>Gabriel Lévesque-Duval</span>

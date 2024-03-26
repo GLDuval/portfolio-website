@@ -6,7 +6,7 @@ import ExperienceCard from '@/app/components/experience-section/ExperienceCard';
 
 const ExperienceSection = () => {
   return (
-    <div className='max-w-7xl mx-auto text-center px-4'>
+    <div className='max-w-6xl mx-auto px-4'>
       <div className='space-y-5'>
         <h2 className='text-4xl font-bold'>Experience</h2>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 content-center justify-stretch'>
