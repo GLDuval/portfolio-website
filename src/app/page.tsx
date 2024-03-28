@@ -64,15 +64,27 @@ export default function HomePage() {
             Get in touch with me
           </h2>
           <div className='flex text-text-50 text-xl gap-4'>
-            <div className='rounded-full border-2 border-primary-50 p-3'>
+            <a
+              className='rounded-full border-2 border-primary-50 p-3'
+              href='https://github.com/GLDuval'
+              target='_blank'
+            >
               <FaGithub />
-            </div>
-            <div className='rounded-full border-2 border-primary-50 p-3'>
+            </a>
+            <a
+              className='rounded-full border-2 border-primary-50 p-3'
+              href='https://www.linkedin.com/in/gabriel-levesque-duval-80a78b15a/'
+              target='_blank'
+            >
               <FaLinkedin />
-            </div>
-            <div className='rounded-full border-2 border-primary-50 p-3'>
+            </a>
+            <a
+              className='rounded-full border-2 border-primary-50 p-3'
+              href='mailto:glevesqueduval@gmail.com'
+              target='_blank'
+            >
               <FaEnvelope />
-            </div>
+            </a>
           </div>
           <div className='py-4'>
             © {new Date().getFullYear()} Built and Designed By Gabriel

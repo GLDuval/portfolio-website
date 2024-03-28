@@ -15,9 +15,11 @@ const ExperienceSection = () => {
             logo={ExpediaLogo}
             period='4 months in 2023'
             tasks={[
-              'Developed a web application',
-              "Maintained the company's website",
-              "Worked on the company's mobile app",
+              'Developed Spring backend services lerveraging AI models to deliver relevant destination images',
+              'Deployed services to Kubernetes clusters',
+              'Created a React web application to manage the services configurations',
+              'Used gRPC to create and use RPC APIs',
+              'Built a tool that automatically exports UAT run results to Elasticsearch, triggered by GitHub Actions',
             ]}
             skills={[
               'Kotlin',
@@ -27,16 +29,19 @@ const ExperienceSection = () => {
               'TypeScript',
               'GraphQL',
               'gRPC',
+              'Datadog',
+              'Docker',
             ]}
           />
           <ExperienceCard
-            title='Software Developer'
+            title='Full Stack Developer Intern'
             logo={OraMedicalLogo}
             period='4 months in 2022'
             tasks={[
-              'Developed a web application',
-              "Maintained the company's website",
-              "Worked on the company's mobile app",
+              'Developed a Next.js web application from scratch to monitor patient data',
+              "Implemented a complete UI redesign in React Native for the company's mobile app",
+              'Made use of Realm to store and sync the mobile app offline data with the server',
+              'Used Bit.dev to share and reuse components between the web and mobile app',
             ]}
             skills={[
               'React',
@@ -49,13 +54,13 @@ const ExperienceSection = () => {
             ]}
           />
           <ExperienceCard
-            title='Software Developer'
+            title='Full Stack Developer Intern'
             logo={CaeLogo}
             period='4 months in 2021'
             tasks={[
-              'Developed a web application',
-              "Maintained the company's website",
-              "Worked on the company's mobile app",
+              'Created a PHP search engine application that utilizes a NLP model to prevent duplicate Jira issues by intelligently detecting similar tickets.',
+              'Designed and implemented a .NET API to store and share files using a SQL database',
+              "Coded a customizable and reusable React form component that was added to my team's Storybook",
             ]}
             skills={[
               'C#',
@@ -63,7 +68,6 @@ const ExperienceSection = () => {
               'PHP',
               'Laravel',
               'React',
-              'Node.js',
               'TypeScript',
               'SQL',
             ]}
@@ -73,9 +77,9 @@ const ExperienceSection = () => {
             logo={CaeLogo}
             period='8 months in 2020'
             tasks={[
-              'Developed a web application',
-              "Maintained the company's website",
-              "Worked on the company's mobile app",
+              'Maintained websites of 200 different clients',
+              'Created a client-friendly bug reporting tool that allows users to select and comment on HTML elements directly within their website using JavaScript and jQuery',
+              "Developed a PHP application to manage the company's clients information internally",
             ]}
             skills={['PHP', 'JavaScript', 'SQL', 'JQuery']}
           />
