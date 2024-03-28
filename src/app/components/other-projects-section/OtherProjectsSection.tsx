@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import Enrich from 'public/images/enrich2.jpg';
+import Robocup from 'public/images/robocup.jpeg';
 
 import ArrowLink from '@/components/links/ArrowLink';
 import UnderlineLink from '@/components/links/UnderlineLink';
@@ -49,9 +49,15 @@ const OtherProjectsSection = () => {
           </motion.h2>
         </motion.div>
       </motion.div>
-      <motion.div className='flex flex-col md:flex-row md:items-stretch max-w-6xl mx-auto px-4 -mt-40 gap-4 '>
-        <div className='bg-white rounded-lg p-6 shadow-primary gap-4 flex flex-col col-span-2 lg:w-1/2'>
-          <div className='flex flex-col gap-2'>
+      <motion.div className='flex flex-col md:flex-row max-w-6xl justify-stretch mx-auto px-4 -mt-40 gap-4 '>
+        <div className='bg-white rounded-lg shadow-primary gap-4 flex flex-col p-6'>
+          <Image
+            src={Robocup}
+            alt='Enrich 2023 Competition'
+            className='rounded-lg'
+            height={500}
+          />
+          <div className='flex flex-col gap-2 '>
             <h3 className='text-xl font-bold pb-2'>
               @ Robocup 2022 in Bangkok
             </h3>
@@ -64,7 +70,14 @@ const OtherProjectsSection = () => {
               experiences.
             </p>
           </div>
-          <hr />
+        </div>
+        <div className='bg-white rounded-lg p-6 shadow-primary gap-4 flex flex-col'>
+          <Image
+            src={Robocup}
+            alt='Enrich 2023 Competition'
+            className='rounded-lg'
+            height={500}
+          />
           <div className='flex flex-col gap-2'>
             <h3 className='text-xl font-bold pb-2'>@ EnRicH 2023 in Austria</h3>
             <p>Took over as the software team lead for our 2022-2023 season.</p>
@@ -77,14 +90,6 @@ const OtherProjectsSection = () => {
               network usage.
             </p>
           </div>
-        </div>
-        <div className='bg-white rounded-lg md:w-1/3 lg:w-1/3'>
-          <Image
-            src={Enrich}
-            alt='Enrich 2023 Competition'
-            className='rounded-lg'
-            height={500}
-          />
         </div>
       </motion.div>
     </>

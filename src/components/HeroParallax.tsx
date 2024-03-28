@@ -2,6 +2,7 @@
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import Profile from 'public/images/enrich2.jpg';
 import React from 'react';
 
 export const HeroParallax = ({
@@ -82,17 +83,27 @@ export const HeroParallax = ({
           }}
         >
           <motion.div className='flex flex-col max-w-6xl mx-auto px-4 gap-20 '>
-            <motion.div className='flex flex-col gap-4 '>
-              <motion.h2 className='text-4xl font-bold text-text-50'>
-                About Me
-              </motion.h2>
-              <motion.p className='text-lg text-text-50 lg:w-3/5'>
-                I’m a recent graduate in Software Engineering from École de
-                Technologie Supérieure in Montreal. I have a passion for
-                full-stack development and especially for all things front end
-                related. As a software engineer, I thrive on turning ideas into
-                elegant, functional solutions.
-              </motion.p>
+            <motion.div className='flex flex-col md:flex-row gap-4 justify-between items-center '>
+              <motion.div className='flex flex-col gap-4 lg:w-3/5'>
+                <motion.h2 className='text-4xl font-bold text-text-50'>
+                  About Me
+                </motion.h2>
+                <motion.p className='text-lg text-text-50'>
+                  I’m a recent graduate in Software Engineering from École de
+                  Technologie Supérieure in Montreal. I have a passion for
+                  full-stack development and especially for all things front end
+                  related. As a software engineer, I thrive on turning ideas
+                  into elegant, functional solutions.
+                </motion.p>
+              </motion.div>
+              <motion.div className='flex flex-col gap-4'></motion.div>
+              <Image
+                src={Profile}
+                alt='Gabriel Lévesque-Duval'
+                width={300}
+                height={300}
+                className='rounded-full'
+              />
             </motion.div>
             <motion.h2 className='text-4xl font-bold text-text-50'>
               Recent Projects

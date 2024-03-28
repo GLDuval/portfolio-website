@@ -2,14 +2,11 @@
 
 import Head from 'next/head';
 import * as React from 'react';
+import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
 import '@/lib/env';
 
 import { HeroParallax } from '@/components/HeroParallax';
-import ArrowLink from '@/components/links/ArrowLink';
 import ButtonLink from '@/components/links/ButtonLink';
-import UnderlineLink from '@/components/links/UnderlineLink';
-import UnstyledLink from '@/components/links/UnstyledLink';
-import Pill from '@/components/Pill';
 
 import ExperienceSection from '@/app/components/experience-section/ExperienceSection';
 import OtherProjectsSection from '@/app/components/other-projects-section/OtherProjectsSection';
@@ -49,45 +46,39 @@ export default function HomePage() {
       <Head>
         <title>Hi</title>
       </Head>
-      <section>
+      <section className='fle'>
         <HeroParallax products={products} />
         <ExperienceSection />
         <div className='pt-20'>
           <OtherProjectsSection />
         </div>
-
-        <div className='layout relative flex min-h-screen flex-col items-center justify-center py-12 text-center'>
-          <Pill>React</Pill>
-          <p className='mt-2 text-sm'>
-            <ArrowLink href='https://github.com/theodorusclarence/ts-nextjs-tailwind-starter'>
-              See the repository
-            </ArrowLink>
-          </p>
-
-          <ButtonLink className='mt-6' href='/components' variant='outline'>
-            See all components
+        <div className='flex flex-col items-center gap-4 py-20'>
+          <h2 className='text-3xl font-bold'>Want to know more about me?</h2>
+          <ButtonLink href='https://theodorusclarence.com?ref=tsnextstarter'>
+            Download my full resume
           </ButtonLink>
-
-          <UnstyledLink
-            href='https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Ftheodorusclarence%2Fts-nextjs-tailwind-starter'
-            className='mt-4'
-          >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              width='92'
-              height='32'
-              src='https://vercel.com/button'
-              alt='Deploy with Vercel'
-            />
-          </UnstyledLink>
-
-          <footer className='absolute bottom-2'>
-            © {new Date().getFullYear()} By{' '}
-            <UnderlineLink href='https://theodorusclarence.com?ref=tsnextstarter'>
-              Theodorus Clarence
-            </UnderlineLink>
-          </footer>
         </div>
+
+        <footer className='flex flex-col items-center bg-primary-500 pt-20 pb-5 gap-4 text-text-50'>
+          <h2 className='text-3xl font-bold text-text-50'>
+            Get in touch with me
+          </h2>
+          <div className='flex text-text-50 text-xl gap-4'>
+            <div className='rounded-full border-2 border-primary-50 p-3'>
+              <FaGithub />
+            </div>
+            <div className='rounded-full border-2 border-primary-50 p-3'>
+              <FaLinkedin />
+            </div>
+            <div className='rounded-full border-2 border-primary-50 p-3'>
+              <FaEnvelope />
+            </div>
+          </div>
+          <div className='py-4'>
+            © {new Date().getFullYear()} Built and Designed By Gabriel
+            Lévesque-Duval
+          </div>
+        </footer>
       </section>
     </main>
   );
