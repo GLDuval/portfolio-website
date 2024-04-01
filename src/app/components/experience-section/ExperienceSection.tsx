@@ -1,5 +1,6 @@
 import CaeLogo from 'public/images/cae-logo.png';
 import ExpediaLogo from 'public/images/expedia-group-Logo.png';
+import MediavoreLogo from 'public/images/mediavore-logo.jpg';
 import OraMedicalLogo from 'public/images/ora-medical-logo.png';
 
 import ExperienceCard from '@/app/components/experience-section/ExperienceCard';
@@ -74,7 +75,7 @@ const ExperienceSection = () => {
           />
           <ExperienceCard
             title='Web Developer'
-            logo={CaeLogo}
+            logo={MediavoreLogo}
             period='8 months in 2020'
             tasks={[
               'Maintained websites of 200 different clients',

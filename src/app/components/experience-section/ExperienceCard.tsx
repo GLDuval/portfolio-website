@@ -18,13 +18,15 @@ const ExperienceCard = ({
   skills,
 }: ExperienceCardProps) => (
   <div className='rounded-xl p-5 shadow-primary'>
-    <div className='flex flex-col gap-4 justify-center'>
-      <div className='mx-auto'>
-        <Image src={logo} alt='Company Logo' height={100} />
-      </div>
+    <div className='flex flex-col gap-4 justify-between items-stretch'>
       <div>
-        <h3>{title}</h3>
-        <p>{period}</p>
+        <div className='flex gap-4 items-center'>
+          <Image src={logo} alt='Company Logo' height={50} />
+          <div>
+            <h3>{title}</h3>
+            <p>{period}</p>
+          </div>
+        </div>
       </div>
       <div className='flex flex-col gap-2'>
         {tasks.map((task) => (
