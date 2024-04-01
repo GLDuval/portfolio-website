@@ -52,14 +52,14 @@ export default function HomePage() {
         <div className='pt-20'>
           <OtherProjectsSection />
         </div>
-        <div className='flex flex-col items-center gap-4 py-20'>
+        <div className='flex flex-col items-center gap-4 py-20 px-4 text-center'>
           <h2 className='text-3xl font-bold'>Want to know more about me?</h2>
           <ButtonLink href='https://theodorusclarence.com?ref=tsnextstarter'>
             Download my full resume
           </ButtonLink>
         </div>
 
-        <footer className='flex flex-col items-center bg-primary-500 pt-20 pb-5 gap-4 text-text-50'>
+        <footer className='flex flex-col items-center bg-primary-500 pt-20 pb-5 gap-4 text-text-50 px-4 text-center'>
           <h2 className='text-3xl font-bold text-text-50'>
             Get in touch with me
           </h2>
