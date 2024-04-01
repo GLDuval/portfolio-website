@@ -83,7 +83,7 @@ export const HeroParallax = ({
           }}
         >
           <motion.div className='flex flex-col max-w-6xl mx-auto px-4 gap-20 '>
-            <motion.div className='flex flex-col md:flex-row gap-4 justify-between items-center '>
+            <motion.div className='flex flex-col md:flex-row gap-4 justify-between items-center'>
               <motion.div className='flex flex-col gap-4 lg:w-3/5'>
                 <motion.h2 className='text-4xl font-bold text-text-50'>
                   About Me
@@ -96,7 +96,6 @@ export const HeroParallax = ({
                   into elegant, functional solutions.
                 </motion.p>
               </motion.div>
-              <motion.div className='flex flex-col gap-4'></motion.div>
               <Image
                 src={Profile}
                 alt='Gabriel Lévesque-Duval'
