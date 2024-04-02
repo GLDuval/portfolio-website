@@ -1,17 +1,19 @@
 'use client';
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 import Image from 'next/image';
-import Link from 'next/link';
 import Profile from 'public/images/enrich2.jpg';
 import React from 'react';
+import { FaGithub, FaLink } from 'react-icons/fa';
 
 export const HeroParallax = ({
   products,
 }: {
   products: {
     title: string;
-    link: string;
+    link?: string;
+    github?: string;
     thumbnail: string;
+    description: string;
   }[];
 }) => {
   const firstRow = products.slice(0, 5);
@@ -150,30 +152,55 @@ export const ProductCard = ({
 }: {
   product: {
     title: string;
-    link: string;
+    link?: string;
+    github?: string;
     thumbnail: string;
+    description: string;
   };
 }) => {
   return (
     <motion.div
+      whileHover={{
+        y: -20,
+      }}
       key={product.title}
       className='group/product h-96 relative justify-center rounded-xl'
     >
-      <Link
-        href={product.link}
-        className='block group-hover/product:shadow-2xl rounded-xl'
-      >
+      <div className='block group-hover/product:shadow-2xl rounded-xl'>
         <Image
           src={product.thumbnail}
           fill
           className='object-left-top absolute h-full w-full inset-0 rounded-xl'
           alt={product.title}
         />
-      </Link>
-      <div className='absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none rounded-xl'></div>
-      <h2 className='absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100'>
-        {product.title}
-      </h2>
+      </div>
+      <div className='absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-90 bg-black pointer-events-none rounded-xl' />
+      <motion.div className='absolute w-full h-full py-10 px-4 opacity-0 group-hover/product:opacity-100'>
+        <div className='flex flex-col h-full items-center justify-between gap-4'>
+          <h2 className='text-text-50'>{product.title}</h2>
+          <p className='text-text-50 text-center'>{product.description}</p>
+          <div className='flex gap-4'>
+            {product.github && (
+              <a
+                className='rounded-full border-2 border-primary-50 p-3'
+                href={product.github}
+                target='_blank'
+              >
+                <FaGithub className='text-text-50' />
+              </a>
+            )}
+            {product.link && (
+              <a
+                className='rounded-full border-2 border-primary-50 p-3'
+                href={product.link}
+                target='_blank'
+              >
+                <FaLink className='text-text-50' />
+              </a>
+            )}
+          </div>
+        </div>
+      </motion.div>
     </motion.div>
   );
 };
