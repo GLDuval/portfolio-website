@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import Enrich from 'public/images/enrich.webp';
+import Enrich from 'public/images/enrich.png';
 import Robocup from 'public/images/robocup.jpeg';
 import RobotAction from 'public/images/robot-action.jpg';
 
