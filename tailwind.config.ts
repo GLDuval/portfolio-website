@@ -1,6 +1,5 @@
 import type { Config } from 'tailwindcss';
 import defaultTheme from 'tailwindcss/defaultTheme';
-import { default as flattenColorPalette } from 'tailwindcss/lib/util/flattenColorPalette';
 
 export default {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
@@ -106,17 +105,5 @@ export default {
       },
     },
   },
-  plugins: [require('@tailwindcss/forms'), addVariablesForColors],
+  plugins: [require('@tailwindcss/forms')],
 } satisfies Config;
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function addVariablesForColors({ addBase, theme }: any) {
-  const allColors = flattenColorPalette(theme('colors'));
-  const newVars = Object.fromEntries(
-    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
-  );
-
-  addBase({
-    ':root': newVars,
-  });
-}

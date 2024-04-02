@@ -22,7 +22,7 @@ import OtherProjectsSection from '@/app/components/other-projects-section/OtherP
  * @see https://stackoverflow.com/questions/68103844/how-to-override-next-js-svg-module-declaration
  */
 
-export const products = [
+const products = [
   {
     title: 'Capra UI',
     thumbnail: CapraUI,
