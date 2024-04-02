@@ -1,6 +1,6 @@
 'use client';
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import Profile from 'public/images/enrich2.jpg';
 import React from 'react';
 import { FaGithub, FaLink } from 'react-icons/fa';
@@ -12,7 +12,7 @@ export const HeroParallax = ({
     title: string;
     link?: string;
     github?: string;
-    thumbnail: string;
+    thumbnail: string | StaticImageData;
     description: string;
   }[];
 }) => {
@@ -154,7 +154,7 @@ export const ProductCard = ({
     title: string;
     link?: string;
     github?: string;
-    thumbnail: string;
+    thumbnail: string | StaticImageData;
     description: string;
   };
 }) => {
@@ -169,7 +169,8 @@ export const ProductCard = ({
       <div className='block group-hover/product:shadow-2xl rounded-xl'>
         <Image
           src={product.thumbnail}
-          fill
+          width={300}
+          height={300}
           className='object-left-top absolute h-full w-full inset-0 rounded-xl'
           alt={product.title}
         />

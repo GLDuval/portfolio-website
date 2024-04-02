@@ -1,6 +1,9 @@
 'use client';
 
 import Head from 'next/head';
+import CapraSite from 'public/images/capra-site.png';
+import CapraUI from 'public/images/capra-ui.png';
+import Ramsai from 'public/images/ramsai.png';
 import * as React from 'react';
 import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
 import '@/lib/env';
@@ -22,16 +25,14 @@ import OtherProjectsSection from '@/app/components/other-projects-section/OtherP
 export const products = [
   {
     title: 'Capra UI',
-    thumbnail:
-      'https://aceternity.com/images/products/thumbnails/new/moonbeam.png',
+    thumbnail: CapraUI,
     description:
       'This application allows the teleoperation of rescue robots by seamlessly integrating real-time sensor information and live video feeds. This user interface was built with React, Electron, Redux and Roslibjs to retrieve information from remote robots.',
     github: 'https://github.com/clubcapra/capra_web_ui',
   },
   {
     title: 'RamsAI',
-    thumbnail:
-      'https://aceternity.com/images/products/thumbnails/new/cursor.png',
+    thumbnail: Ramsai,
     description:
       'A React Native mobile app, powered by Firebase and the GPT API that scrapes local supermarkets for weekly on-sale ingredients. It then crafts personalized recipes for users on a weekly basis using GPT language models',
     github: 'https://github.com/GLDuval/LOG450-APP-EQUIPE03',
@@ -39,8 +40,7 @@ export const products = [
   {
     title: 'Club Capra Website',
     link: 'https://www.clubcapra.com/',
-    thumbnail:
-      'https://aceternity.com/images/products/thumbnails/new/rogue.png',
+    thumbnail: CapraSite,
     description:
       'This website was designed and deployed by me for the student initivative Capra. The website is used as a promotional tool to recruit new members or show potential sponsors what our student club does.',
     github: 'https://github.com/clubcapra/clubcapra.github.io',
