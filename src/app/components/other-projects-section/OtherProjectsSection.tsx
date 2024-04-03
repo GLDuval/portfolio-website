@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import Enrich from 'public/images/enrich.png';
+import Enrich from 'public/images/enrich.jpg';
 import Robocup from 'public/images/robocup.jpeg';
 import RobotAction from 'public/images/robot-action.jpg';
 
@@ -66,7 +66,7 @@ const OtherProjectsSection = () => {
         <div className='bg-white rounded-lg shadow-primary gap-4 flex flex-col p-6'>
           <Image
             src={Robocup}
-            alt='Enrich 2023 Competition'
+            alt='Robocup 2023 Competition'
             className='rounded-lg'
             height={500}
           />

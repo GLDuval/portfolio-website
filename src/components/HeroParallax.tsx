@@ -1,7 +1,7 @@
 'use client';
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 import Image, { StaticImageData } from 'next/image';
-import Profile from 'public/images/enrich2.jpg';
+import Profile from 'public/images/profile.jpg';
 import React from 'react';
 import { FaGithub, FaLink } from 'react-icons/fa';
 
@@ -38,7 +38,7 @@ export const HeroParallax = ({
     springConfig
   );
   const translateY = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [-1000, 100]),
+    useTransform(scrollYProgress, [0, 0.2], [-1200, 100]),
     springConfig
   );
   // Only show the text when the user has scrolled all the way down
@@ -121,7 +121,7 @@ export const HeroParallax = ({
         }}
       >
         <motion.div className='max-w-6xl mx-auto px-4 pt-10 -mt-60'>
-          <motion.div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 content-center justify-stretch'>
+          <motion.div className='grid grid-cols-1 md:grid-cols-2 gap-6 content-center justify-stretch'>
             {firstRow.map((product) => (
               <ProductCard product={product} key={product.title} />
             ))}
@@ -135,11 +135,11 @@ export const HeroParallax = ({
 export const Header = () => {
   return (
     <div className='max-w-6xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0'>
-      <h1 className='text-2xl md:text-7xl font-bold'>
+      <h1 className='text-4xl md:text-7xl font-bold'>
         Hey, I'm <br />
         <span className='text-primary-500'>Gabriel Lévesque-Duval</span>
       </h1>
-      <p className='max-w-2xl text-base md:text-xl mt-8 '>
+      <p className='max-w-2xl text-lg md:text-xl mt-8 '>
         I'm a software engineer who loves building things that are meaningful to
         people's lives.
       </p>
@@ -164,13 +164,16 @@ export const ProductCard = ({
         y: -20,
       }}
       key={product.title}
-      className='group/product h-96 relative justify-center rounded-xl'
+      className='group/product relative justify-center rounded-xl'
+      style={{
+        height: 300,
+      }}
     >
       <div className='block group-hover/product:shadow-2xl rounded-xl'>
         <Image
           src={product.thumbnail}
-          width={300}
           height={300}
+          width={520}
           className='object-left-top absolute h-full w-full inset-0 rounded-xl'
           alt={product.title}
         />

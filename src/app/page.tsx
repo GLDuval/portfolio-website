@@ -1,6 +1,5 @@
 'use client';
 
-import Head from 'next/head';
 import CapraSite from 'public/images/capra-site.png';
 import CapraUI from 'public/images/capra-ui.png';
 import Ramsai from 'public/images/ramsai.png';
@@ -50,9 +49,6 @@ const products = [
 export default function HomePage() {
   return (
     <main>
-      <Head>
-        <title>Hi</title>
-      </Head>
       <section className='fle'>
         <HeroParallax products={products} />
         <ExperienceSection />
