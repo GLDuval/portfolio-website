@@ -50,7 +50,7 @@ const OtherProjectsSection = () => {
               <ArrowLink
                 href='https://www.linkedin.com/feed/update/urn:li:activity:7076642547237822464'
                 target='_blank'
-                className='text-text-50'
+                className='text-text-50 font-medium text-lg'
               >
                 See our robot in action
               </ArrowLink>
