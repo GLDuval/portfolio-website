@@ -57,7 +57,10 @@ export default function HomePage() {
         </div>
         <div className='flex flex-col items-center gap-4 py-20 px-4 text-center'>
           <h2 className='text-3xl font-bold'>Want to know more about me?</h2>
-          <ButtonLink href='https://theodorusclarence.com?ref=tsnextstarter'>
+          <ButtonLink
+            href='/documents/GabrielLevesque-Duval_CV_EN.pdf'
+            target='_blank'
+          >
             Download my full resume
           </ButtonLink>
         </div>
