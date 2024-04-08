@@ -121,7 +121,7 @@ export const HeroParallax = ({
         }}
       >
         <motion.div className='max-w-6xl mx-auto px-4 pt-10 -mt-60'>
-          <motion.div className='grid grid-cols-1 md:grid-cols-2 gap-6 content-center justify-stretch'>
+          <motion.div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 content-center'>
             {firstRow.map((product) => (
               <ProductCard product={product} key={product.title} />
             ))}
@@ -164,22 +164,23 @@ export const ProductCard = ({
         y: -20,
       }}
       key={product.title}
-      className='group/product relative justify-center rounded-xl'
+      className='group/product relative justify-center rounded-xl mx-auto'
       style={{
-        height: 300,
+        height: 350,
+        width: 350,
       }}
     >
       <div className='block group-hover/product:shadow-2xl rounded-xl'>
         <Image
           src={product.thumbnail}
-          height={300}
-          width={520}
+          height={350}
+          width={350}
           className='object-left-top absolute h-full w-full inset-0 rounded-xl'
           alt={product.title}
         />
       </div>
       <div className='absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-90 bg-black pointer-events-none rounded-xl' />
-      <motion.div className='absolute w-full h-full py-10 px-4 opacity-0 group-hover/product:opacity-100'>
+      <motion.div className='absolute w-full h-full py-4 px-4 opacity-0 group-hover/product:opacity-100'>
         <div className='flex flex-col h-full items-center justify-between gap-4'>
           <h2 className='text-text-50'>{product.title}</h2>
           <p className='text-text-50 text-center'>{product.description}</p>
