@@ -80,7 +80,7 @@ const ExperienceSection = () => {
             tasks={[
               'Maintained websites of 200 different clients',
               'Created a client-friendly bug reporting tool that allows users to select and comment on HTML elements directly within their website using JavaScript and jQuery',
-              "Developed a PHP application to manage the company's clients information internally",
+              "Developed a PHP application to manage the company's clients' information internally",
             ]}
             skills={['PHP', 'JavaScript', 'SQL', 'JQuery']}
           />
